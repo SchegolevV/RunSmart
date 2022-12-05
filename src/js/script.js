@@ -37,18 +37,23 @@
 $(document).ready(function(){
     $(".owl-carousel").owlCarousel({
         loop:true,
-        margin:10,
+        dots:false,
         nav:true,
+        navText : ["<img src='icons/list-four/chevron-left-solid.svg'>","<img src='icons/list-four/chevron-right-solid.svg'>"],
         autoWidth:true,
         responsive:{
             0:{
                 items:1
             },
-            600:{
-                items:1
+            767:{
+                items:1,
+                autoWidth:true,
+                nav:false,
+                dots:true
             },
-            1000:{
+            1023:{
                 items:1
+
             }
         }
     });
