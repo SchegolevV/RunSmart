@@ -1,19 +1,25 @@
-                                    // by slick-slider
+                                    // by owl-carousel
 // $(document).ready(function(){
-//     $('.slider__inner').slick({
-//         speed: 500,
-//         adaptiveHeight: true,
-//         prevArrow: '<button type="button" class="slick-prev"><img src="icons/list-four/chevron-left-solid.svg"></img></button>',
-//         nextArrow: '<button type="button" class="slick-next"><img src="icons/list-four/chevron-right-solid.svg"></img></button>',
-//         responsive: [
-//             {
-//                 breakpoint: 992,
-//                 settings: {
-//                   dots: true,
-//                   arrows: false
-//                 }
+//    $(".owl-carousel").owlCarousel({
+//         loop:true,
+//         dots:false,
+//         nav:true,
+//         navText : ["<img src='icons/list-four/chevron-left-solid.svg'>","<img src='icons/list-four/chevron-right-solid.svg'>"],
+//         autoWidth:true,
+//         responsive:{
+//             0:{
+//                 items:1
+//             },
+//             767:{
+//                 items:1,
+//                 nav:true,
+//                 dots:true
+//             },
+//             1023:{
+//                 items:1
+
 //             }
-//         ]
+//         }
 //     });
 // });
                                // by tiny slider
@@ -35,27 +41,23 @@
 //   });
 
 $(document).ready(function(){
-    $(".owl-carousel").owlCarousel({
-        loop:true,
-        dots:false,
-        nav:true,
-        navText : ["<img src='icons/list-four/chevron-left-solid.svg'>","<img src='icons/list-four/chevron-right-solid.svg'>"],
-        autoWidth:true,
-        responsive:{
-            0:{
-                items:1
-            },
-            767:{
-                items:1,
-                autoWidth:true,
-                nav:false,
-                dots:true
-            },
-            1023:{
-                items:1
-
+    
+    $('.slider__inner').slick({
+        speed: 500,
+        adaptiveHeight: false,
+        dotsClass: ['slider__dots'],
+        prevArrow: '<button type="button" class="slick-prev"><img src="icons/list-four/chevron-left-solid.svg"></img></button>',
+        nextArrow: '<button type="button" class="slick-next"><img src="icons/list-four/chevron-right-solid.svg"></img></button>',
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                  dots: true,
+                  arrows: false,
+                  speed: 200
+                }
             }
-        }
+        ]
     });
 
     $('ul.catalog__tabs').on('click', 'li:not(.catalog__tab_active)', function() {

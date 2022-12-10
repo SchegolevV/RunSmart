@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="css/slick.css"/> -->
+    <link rel="stylesheet" href="css/slick.css"/>
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css"> -->
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
@@ -62,7 +62,7 @@
 
     <section class="adv">
         <div class="container">
-            <div class="adv__header">
+            <div class="title">
                 НАШИ ПРЕИМУЩЕСТВА
             </div>
             <div class="adv__items">
@@ -104,7 +104,7 @@
 
     <section class="slider">
        <div class="container">
-            <div class="owl-carousel slider__inner">
+            <div class="slider__inner">
                 <div>
                     <img class="slider__img" src="slides/slide1.jpg" alt="slide">
                 </div>
@@ -371,13 +371,60 @@
             </div>
         </div>
     </section>
-    <!-- <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>  способ через slick-slider
-    <script src="js/slick.min.js"></script> -->
+
+    <section class="reviews">
+        <div class="container">
+            <h2 class="title">отзывы клиентов</h2>
+            <div class="review">
+                <div class="review__wrapper">
+                    <div class="review__client-photo">
+                        <img src="img/clients/client1.png" alt="photo">
+                    </div>
+                    <div class="review__flex-part">
+                        <h2 class="review__client-name">Ирина Иванченко</h2>
+                        <h3 class="review__client-inf">2 полумарафона</h3>
+                        <h3 class="review__client-text">Не знала, что себе купить - обратилась к ребятам из RunSmart - подобрали пульсометр, который подошёл именно под мои цели и финансовые возможности. Через некоторое время решила обновить гаджет - не раздумывая обратилась туда же.<br><br>Новые цели - новый гаджет!<br><br>
+                            Спасибо, RunSmart!
+                        </h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="review">
+                <div class="review__wrapper">
+                    <div class="review__client-photo">
+                        <img src="img/clients/client2.png" alt="photo">
+                    </div>
+                    <div class="review__flex-part">
+                        <h2 class="review__client-name">Иван Сёмочкин</h2>
+                        <h3 class="review__client-inf">1 полумарафон</h3>
+                        <h3 class="review__client-text">Крутая штука-пульсометр. Обычно без них бегал. Оказывается только хуже себе делал.<br> Купил пульсометр, ещё в подарок получил тренировку. Со мной вместе провели первую тренировку, научили пользоваться новым гаджетом. Также объяснили основы анатомии, составили план тренировок на месяц вперёд.<br><br>С ними подготовился к своему первому полумарафону! Спасибо!!!
+                        </h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="review">
+                <div class="review__wrapper">
+                    <div class="review__client-photo">
+                        <img src="img/clients/client3.png" alt="photo">
+                    </div>
+                    <div class="review__flex-part">
+                        <h2 class="review__client-name">Юлия Дашкина</h2>
+                        <h3 class="review__client-inf">2 полумарафона</h3>
+                        <h3 class="review__client-text">Долго не могла начать бегать, т.к. до этого несколько раз начинала, но становилось тяжело и я бросала. От друзей услышала о RunSmart и о беге с контролем пульса и решила попробовать.<br><br>Позвонила, ребята поинтересовались моими целями и подобрали очень интересный вариант со скидкой! Теперь бегаю и наслаждаюсь бегом! Пробежала уже 2 полумарафона и несколько более коротких забегов и не намерена останавливаться!<br><br>Спасибо!!!
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script> -->
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>   слайдер через tiny-slider -->
     <script src="js/jquery/jquery-3.6.1.js"></script>
     <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
+    <!-- <script src="js/owl.carousel.min.js"></script> -->
+    <script src="js/slick.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

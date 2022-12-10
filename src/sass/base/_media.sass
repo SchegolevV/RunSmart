@@ -31,8 +31,7 @@
         &__descr
             font-size: 17px
             line-height: 22px
-    .owl-item 
-        width: 550px
+    
 @media ( max-width: 767px )
     .promo
         &__icons
@@ -57,7 +56,45 @@
             img
                 margin-top: 20px
                 margin-bottom: 10px
-@media  ( max-width: 424px )
+    .slider
+        &__inner
+            width: 400px
+        &__img
+            width: 400px
+    .title
+        font-size: 25px
+    .catalog
+        &__tab
+            height: 30px
+            font-size: 12px
+            line-height: 27px
+    .review
+        &__flex-part
+            width: inherit
+            margin: 0
+        &__wrapper
+            flex-direction: column
+            align-items: center
+        &__client-photo
+            margin: 0 0 20px 0
+            img
+                width: 130px
+
+@media  ( max-width: 425px )
+    .slider
+        &__inner
+            width: 295px
+        &__img
+            width: 300px
+    .title
+        font-size: 20px
+    .catalog
+        &__tabs
+            margin-top: 30px
+        &__tab
+            height: 20px
+            font-size: 10px
+            line-height: 18px
     .header
         &__logo
             img
@@ -84,6 +121,21 @@
         &_left
             font-size: 20px
             line-height: 27px
+    .catalog
+        padding-bottom: 70px
+
+@media  ( max-width: 375px )
+    .catalog
+        padding-bottom: 50px
+        &__tab
+            font-size: 9px
+    .review
+        &__client-photo
+            margin: 0 0 20px 0
+            img
+                width: 100px
+        &__client-text
+            font-size: 13px
 
     
     

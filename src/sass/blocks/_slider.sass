@@ -4,7 +4,31 @@
         position: relative
         width: 750px
         margin: 0 auto
-    .owl-prev
+    &__dots
+        display: flex
+        justify-content: center
+        margin-bottom: 0
+        padding-left: 0
+        li
+            list-style: none
+        .slick-active
+            button
+                background-color: $main_color
+    
+        button
+            background-color: grey
+            margin: 0 20px
+            font-size: 0
+            width: 10px
+            height: 12px
+            border-radius: 100%
+            border: none
+
+
+            
+
+
+    .slick-prev
         position: absolute
         top: 50%
         transform: translateY(-50%)
@@ -12,7 +36,7 @@
         border: none
         background-color: #fff
 
-    .owl-next
+    .slick-next
         position: absolute
         top: 50%
         transform: translateY(-50%)
