@@ -102,6 +102,10 @@
             width: 100%
             height: 170px
             padding: 20px 30px 20px
+    .modal
+        &__close
+            right: 9px
+            line-height: 48px
 
 @media  ( max-width: 425px )
     .slider
@@ -164,12 +168,23 @@
             img
                 width: 40px
                 height: 40px
+    .modal
+        width: 320px
+        padding: 38px 10px 40px 10px
+        &__close
+            right: 4px
+            line-height: 45px
 
 @media  ( max-width: 375px )
     .catalog
         padding-bottom: 50px
+        &__tabs
+            flex-direction: column
         &__tab
-            font-size: 9px
+            height: 32px
+            font-size: 14px
+            line-height: 30px
+            margin-bottom: 19px
     .review
         &__client-photo
             margin: 0 0 20px 0
@@ -177,6 +192,7 @@
                 width: 100px
         &__client-text
             font-size: 13px
+    
 
     
     
