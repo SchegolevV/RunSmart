@@ -77,6 +77,27 @@ $(document).ready(function(){
         });
     };
 
+
+    $('.catalog__content_active').slick({
+        speed: 500,
+        adaptiveHeight: false,
+        dotsClass: ['slider__dots'],
+        responsive: [
+            {
+                breakpoint: 6000,
+                settings:"unslick",
+            },
+            {
+            breakpoint: 768,
+            settings: {
+            dots: true,
+            arrows: false,
+            speed: 200
+            }
+            }
+        ]
+    });
+
     toggleSlide('.catalog-item__link');
     toggleSlide('.catalog-item__back');
 
@@ -95,4 +116,43 @@ $(document).ready(function(){
             $('.overlay, #order').fadeIn('fast');
         });
     });
+
+
+    
+    function validateForms(form){
+        $(form).validate({
+            rules: {
+                name: {
+                    required: true,
+                    minlength: 2
+                },
+                phone: {
+                    required: true,
+                    minlength: 11
+                },
+                email: {
+                    required: true,
+                    email: true
+                }
+            },
+            messages: {
+                name: {
+                    required: "Пожалуйста, введите своё имя",
+                    minlength: jQuery.validator.format("Минимальное количество букв: {0}")
+                },
+                phone: "Пожалуйста, введите свой номер телефона",
+                email: {
+                    required: "Пожалуйста, введите свою почту ",
+                    email: "Неправильный адрес почты"
+                }
+            }
+        });
+    };
+
+    validateForms('#consultation-form');
+    validateForms('#consultation form');
+    validateForms('#order form');
+
+
+    $('input[name=phone]').mask("+7 (999)-999-9999");
 });
