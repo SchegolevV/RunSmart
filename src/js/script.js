@@ -155,4 +155,48 @@ $(document).ready(function(){
 
 
     $('input[name=phone]').mask("+7 (999)-999-9999");
+
+    $('form').submit(function(e) {
+        e.preventDefault();
+
+        if (!$(this).valid()) {
+            return;
+        }
+
+        $.ajax({
+            type: "POST",
+            url: "mailer/smart.php",
+            data: $(this).serialize()
+        }).done(function() {
+            $(this).find("input").val("");
+
+
+            $('form').trigger('reset')
+        });
+        return false;
+    });
+
+    //smooth scroll and pageup
+
+
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 1600) {
+            $('.pageup').fadeIn();
+        } else {
+            $('.pageup').fadeOut();
+        }
+
+    });
+
+    $('a[href^="#"]').on('click', function() {
+
+        const _href = $(this).attr('href');
+    
+        $('html, body').animate({
+            scrollTop: $(href).offset().top+"px"
+        });
+        return false;
+    });
+    
+    new WOW().init();
 });
