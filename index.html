@@ -435,7 +435,18 @@
             </div>
         </div>
         
-        <script defer src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A30a22962a8f449ad5a570b4176d12cc7090a851a9d96634454d6af8b756966f1&amp;width=100%25&amp;height=630&amp;lang=ru_RU&amp;scroll=false"></script>
+        <script defer src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A30a22962a8f449ad5a570b4176d12cc7090a851a9d96634454d6af8b756966f1&amp;width=100%25&amp;height=630&amp;lang=ru_RU&amp;scroll=falseloadByRequire=1"></script>
+        <script>
+            function getYaMap(){
+                var myMap = new ymaps.Map("map",{center: [30.325,59.935],zoom: 13});
+                ymaps.geocode("Москва, Мясницкий проезд, д.3с1").then(function (res) {
+                    var coord = res.geoObjects.get(0).geometry.getCoordinates();
+                    var myPlacemark = new ymaps.Placemark(coord);
+                    myMap.geoObjects.add(myPlacemark);
+                    myMap.setCenter(coord);					
+                });
+            }
+            </script>
 
     </footer>
 
